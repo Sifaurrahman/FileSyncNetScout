@@ -1,0 +1,15 @@
+C:\Users\sifau\CSharpDistributedScanner\AgentB\bin\Debug\net8.0\AgentB.exe
+C:\Users\sifau\CSharpDistributedScanner\AgentB\bin\Debug\net8.0\AgentB.deps.json
+C:\Users\sifau\CSharpDistributedScanner\AgentB\bin\Debug\net8.0\AgentB.runtimeconfig.json
+C:\Users\sifau\CSharpDistributedScanner\AgentB\bin\Debug\net8.0\AgentB.dll
+C:\Users\sifau\CSharpDistributedScanner\AgentB\bin\Debug\net8.0\AgentB.pdb
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\AgentB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\AgentB.AssemblyInfoInputs.cache
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\AgentB.AssemblyInfo.cs
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\AgentB.csproj.CoreCompileInputs.cache
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\AgentB.sourcelink.json
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\AgentB.dll
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\refint\AgentB.dll
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\AgentB.pdb
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\AgentB.genruntimeconfig.cache
+C:\Users\sifau\CSharpDistributedScanner\AgentB\obj\Debug\net8.0\ref\AgentB.dll

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.IO.Pipes;
 using System.Collections.Generic;
 using System.Threading;
 
@@ -37,24 +38,38 @@ class Program
     static void Main()
     {
         Console.Write("Enter path to directory with .txt files: ");
-        string path = Console.ReadLine();
+        string? input = Console.ReadLine();
+        string path = input ?? "";
 
-        Thread fileReadThread = new Thread(() =>
+        if (string.IsNullOrWhiteSpace(path) || !Directory.Exists(path))
+        {
+            Console.WriteLine("Invalid directory path.");
+            return;
+        }
+
+        Thread fileReadAndSendThread = new Thread(() =>
         {
             try
             {
                 var indexedData = WordIndexer.IndexWords(path);
 
-                Console.WriteLine("\nIndexed Results:");
-                foreach (var file in indexedData)
+                using (NamedPipeClientStream pipeClient = new NamedPipeClientStream(".", "agent1", PipeDirection.Out))
                 {
-                    foreach (var entry in file.Value)
+                    pipeClient.Connect();
+                    using (StreamWriter writer = new StreamWriter(pipeClient))
                     {
-                        Console.WriteLine($"{file.Key}:{entry.Key}:{entry.Value}");
+                        writer.AutoFlush = true;
+                        foreach (var file in indexedData)
+                        {
+                            foreach (var entry in file.Value)
+                            {
+                                writer.WriteLine($"{file.Key}:{entry.Key}:{entry.Value}");
+                            }
+                        }
                     }
                 }
 
-                // We'll later send this data via named pipe to Master.
+                Console.WriteLine("AgentA sent data to master via named pipe.");
             }
             catch (Exception ex)
             {
@@ -62,7 +77,7 @@ class Program
             }
         });
 
-        fileReadThread.Start();
-        fileReadThread.Join();  // Wait for the thread to finish
+        fileReadAndSendThread.Start();
+        fileReadAndSendThread.Join();
     }
 }

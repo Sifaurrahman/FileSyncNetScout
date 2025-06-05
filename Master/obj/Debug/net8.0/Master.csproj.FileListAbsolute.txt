@@ -1,0 +1,15 @@
+C:\Users\sifau\CSharpDistributedScanner\Master\bin\Debug\net8.0\Master.exe
+C:\Users\sifau\CSharpDistributedScanner\Master\bin\Debug\net8.0\Master.deps.json
+C:\Users\sifau\CSharpDistributedScanner\Master\bin\Debug\net8.0\Master.runtimeconfig.json
+C:\Users\sifau\CSharpDistributedScanner\Master\bin\Debug\net8.0\Master.dll
+C:\Users\sifau\CSharpDistributedScanner\Master\bin\Debug\net8.0\Master.pdb
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\Master.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\Master.AssemblyInfoInputs.cache
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\Master.AssemblyInfo.cs
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\Master.csproj.CoreCompileInputs.cache
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\Master.sourcelink.json
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\Master.dll
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\refint\Master.dll
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\Master.pdb
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\Master.genruntimeconfig.cache
+C:\Users\sifau\CSharpDistributedScanner\Master\obj\Debug\net8.0\ref\Master.dll

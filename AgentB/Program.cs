@@ -38,13 +38,21 @@ class Program
     static void Main()
     {
         Console.Write("Enter directory path with .txt files: ");
-        string path = Console.ReadLine();
+        string? input = Console.ReadLine();
+        string path = input ?? "";
+
+        if (string.IsNullOrWhiteSpace(path) || !Directory.Exists(path))
+        {
+            Console.WriteLine("Invalid directory path.");
+            return;
+        }
 
         Thread readAndSendThread = new Thread(() =>
         {
             try
             {
                 var indexedData = WordIndexer.IndexWords(path);
+
                 using (NamedPipeClientStream pipeClient = new NamedPipeClientStream(".", "agent2", PipeDirection.Out))
                 {
                     pipeClient.Connect();
