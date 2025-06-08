@@ -3,6 +3,7 @@ using System.IO;
 using System.IO.Pipes;
 using System.Collections.Generic;
 using System.Threading;
+using System.Diagnostics;
 
 class WordIndexer
 {
@@ -37,7 +38,10 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Enter directory path with .txt files: ");
+        Process current = Process.GetCurrentProcess();
+        current.ProcessorAffinity = (IntPtr)(1 << 1); // Core 1
+
+        Console.Write("Enter path to directory with .txt files: ");
         string? input = Console.ReadLine();
         string path = input ?? "";
 
@@ -69,7 +73,7 @@ class Program
                     }
                 }
 
-                Console.WriteLine("Data sent to master via named pipe.");
+                Console.WriteLine("AgentB sent data to master via named pipe.");
             }
             catch (Exception ex)
             {

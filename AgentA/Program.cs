@@ -3,6 +3,7 @@ using System.IO;
 using System.IO.Pipes;
 using System.Collections.Generic;
 using System.Threading;
+using System.Diagnostics;
 
 class WordIndexer
 {
@@ -37,6 +38,9 @@ class Program
 {
     static void Main()
     {
+        Process current = Process.GetCurrentProcess();
+        current.ProcessorAffinity = (IntPtr)(1 << 0); // Core 0
+
         Console.Write("Enter path to directory with .txt files: ");
         string? input = Console.ReadLine();
         string path = input ?? "";

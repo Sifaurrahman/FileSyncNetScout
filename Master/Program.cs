@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Pipes;
+using System.Collections.Generic;
 using System.Threading;
+using System.Diagnostics;
 
 class Program
 {
@@ -52,6 +53,9 @@ class Program
 
     static void Main()
     {
+        Process current = Process.GetCurrentProcess();
+        current.ProcessorAffinity = (IntPtr)(1 << 2); // Core 2
+
         Console.WriteLine("Master process started.");
 
         Thread agent1Thread = new(() => HandlePipe("agent1", "AgentA"));
