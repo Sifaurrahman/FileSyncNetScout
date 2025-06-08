@@ -23,3 +23,7 @@ A distributed system with two file indexing agents and a central master processo
 - Multithreading
 - Named pipes (NamedPipeClientStream / ServerStream)
 - `Processor.ProcessorAffinity`
+
+## GitHub Repository
+
+[GitHub Repository Link](https://github.com/Sifaurrahman/FileSyncNetScout)
